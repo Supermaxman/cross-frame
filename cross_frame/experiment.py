@@ -35,6 +35,8 @@ def run_experiment(client: OpenAI, config: ExperimentConfig):
         for attempt in range(config.model.max_attempts):
             try:
                 results = run_attempt(client, config, sample, attempt)
+            except KeyboardInterrupt:
+                raise
             except Exception as e:
                 print(f"s={sample}, a={attempt} failed with error: {e}")
             if results is not None:
@@ -84,9 +86,9 @@ def run_attempt(
     good, stats = check_results(response_schema, test_shuffled, test_problems)
     print(stats_to_text(stats))
 
+    print_messages(messages)
     if not good:
         print(f"s={sample}, a={attempt} failed")
-        print_messages(messages)
         # print_results(response_schema)
         # follow_up = input()
         # resp = run_follow_up(
