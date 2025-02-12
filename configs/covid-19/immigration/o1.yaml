@@ -1,0 +1,22 @@
+seed: 0
+# could go lower, but 1 second per request to avoid spamming
+model:
+  num_samples: 1
+  max_attempts: 10
+  delay: 1.0
+  model: o1-2024-12-17
+  max_completion_tokens: 16384
+  prompt_cost: 0.0150
+  completion_cost: 0.0600
+
+data:
+  sample_size: 1000
+  train_topic: Immigration
+  train_path: "C:/Users/maxwe/My Drive/Data/Immigration/tweets_immigration_Nrs.xlsx"
+  train_frames: "C:/Users/maxwe/My Drive/Data/Immigration/frames.json"
+  test_topic: COVID-19 Vaccines
+  test_path: "C:/Users/maxwe/My Drive/Data/vaccine-frames/covid19/annotations-and-data/test.jsonl"
+
+pred:
+  # will automatically prefix with test topic / train topic / model
+  prediction_path: "C:/Users/maxwe/My Drive/Artifacts/cross-topic-frames"

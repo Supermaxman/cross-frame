@@ -1,0 +1,25 @@
+seed: 0
+# could go lower, but 1 second per request to avoid spamming
+model:
+  num_samples: 1
+  max_attempts: 10
+  delay: 1.0
+  model: o3-mini-2025-01-31
+  max_completion_tokens: 32768
+  prompt_cost: 0.0150
+  completion_cost: 0.0600
+
+data:
+  sample_size: 1000
+  train_topic: COVID-19 Vaccines
+  # train_path: /content/drive/MyDrive/Data/vaccine-frames/covid19/annotations-and-data/test.jsonl
+  train_path: "C:/Users/maxwe/My Drive/Data/vaccine-frames/covid19/annotations-and-data/test.jsonl"
+  # train_frames: /content/co-vax-frames-claims-topics/annotations/frames.json
+  train_frames: "C:/Users/maxwe/My Drive/Data/co-vax-frames-claims-topics/annotations/frames.json"
+  test_topic: "Feminism"
+  # not needed for SemEval datasets, leave empty
+  test_path: "."
+
+pred:
+  # will automatically prefix with test topic / train topic / model
+  prediction_path: "C:/Users/maxwe/My Drive/Artifacts/cross-topic-frames"

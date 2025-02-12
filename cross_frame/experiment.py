@@ -86,8 +86,8 @@ def run_attempt(
     good, stats = check_results(response_schema, test_shuffled, test_problems)
     print(stats_to_text(stats))
 
-    print_messages(messages)
     if not good:
+        print_messages(messages)
         print(f"s={sample}, a={attempt} failed")
         # print_results(response_schema)
         # follow_up = input()
