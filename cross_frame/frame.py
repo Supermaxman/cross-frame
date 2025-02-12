@@ -1,8 +1,9 @@
-import os
-import argparse
 from dotenv import load_dotenv
 
-from openai import OpenAI
+load_dotenv()
+
+import argparse
+
 import yaml
 
 from cross_frame.configuration import (
@@ -12,16 +13,6 @@ from cross_frame.configuration import (
     PredictionConfig,
 )
 from cross_frame.experiment import run_experiment
-
-
-def run(config: ExperimentConfig):
-    load_dotenv()
-
-    client = OpenAI(
-        api_key=os.getenv("OPENAI_API_KEY"),
-    )
-
-    run_experiment(client, config)
 
 
 if __name__ == "__main__":
@@ -38,4 +29,4 @@ if __name__ == "__main__":
         data=DataConfig(**config["data"]),
         pred=PredictionConfig(**config["pred"]),
     )
-    run(config)
+    run_experiment(config)

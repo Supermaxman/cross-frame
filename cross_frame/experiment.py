@@ -17,7 +17,7 @@ from openai import OpenAI
 from cross_frame.rejection import check_results, stats_to_text
 
 
-def run_experiment(client: OpenAI, config: ExperimentConfig):
+def run_experiment(config: ExperimentConfig):
     # output folder should be pred_path/test_topic/train_topic/model
     output_model_folder = os.path.join(
         config.pred.prediction_path,
@@ -34,7 +34,7 @@ def run_experiment(client: OpenAI, config: ExperimentConfig):
         results = None
         for attempt in range(config.model.max_attempts):
             try:
-                results = run_attempt(client, config, sample, attempt)
+                results = run_attempt(config, sample, attempt)
             except KeyboardInterrupt:
                 raise
             except Exception as e:
@@ -49,7 +49,7 @@ def run_experiment(client: OpenAI, config: ExperimentConfig):
 
 
 def run_attempt(
-    client: OpenAI, config: ExperimentConfig, sample: int = 0, attempt: int = 0
+    config: ExperimentConfig, sample: int = 0, attempt: int = 0
 ) -> dict | None:
     attempt_seed = config.seed + 100 * sample + 1000 * attempt
     train, train_problems, train_frames_all = load_train(
@@ -66,7 +66,6 @@ def run_attempt(
     print(f"s={sample}, a={attempt} Test size: {len(test_shuffled)}")
 
     response_schema, id_lookup, messages, usage = run_prompt(
-        client=client,
         train=train_shuffled,
         train_frames=train_frames,
         train_problems=train_problems,
@@ -82,12 +81,14 @@ def run_attempt(
     print(
         f"s={sample}, a={attempt} Test size: {len(test_shuffled)}, {len(response_schema['frames'])} frames"
     )
-    print(usage_to_text(usage))
+    # TODO support usage from Google's response.usage_metadata
+    # print(usage_to_text(usage))
     good, stats = check_results(response_schema, test_shuffled, test_problems)
     print(stats_to_text(stats))
 
     if not good:
-        print_messages(messages)
+        # TODO support printing messages from Google
+        # print_messages(messages)
         print(f"s={sample}, a={attempt} failed")
         # print_results(response_schema)
         # follow_up = input()

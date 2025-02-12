@@ -1,0 +1,24 @@
+seed: 0
+# could go lower, but 1 second per request to avoid spamming
+model:
+  num_samples: 1
+  max_attempts: 10
+  delay: 1.0
+  # https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro
+  model: gemini-1.5-pro-latest
+  max_completion_tokens: 8192
+  prompt_cost: 0.00250
+  completion_cost: 0.01000
+
+data:
+  sample_size: 1000
+  train_topic: Immigration
+  train_path: "C:/Users/maxwe/My Drive/Data/Immigration/tweets_immigration_Nrs.xlsx"
+  train_frames: "C:/Users/maxwe/My Drive/Data/Immigration/frames.json"
+  test_topic: Abortion
+  # not needed for SemEval datasets, leave empty
+  test_path: "."
+
+pred:
+  # will automatically prefix with test topic / train topic / model
+  prediction_path: "C:/Users/maxwe/My Drive/Artifacts/cross-topic-frames"
