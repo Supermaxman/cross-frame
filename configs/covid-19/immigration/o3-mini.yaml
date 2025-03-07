@@ -16,6 +16,7 @@ data:
   train_frames: "C:/Users/maxwe/My Drive/Data/Immigration/frames.json"
   test_topic: COVID-19 Vaccines
   test_path: "C:/Users/maxwe/My Drive/Data/vaccine-frames/covid19/annotations-and-data/test.jsonl"
+  test_frames: "C:/Users/maxwe/My Drive/Data/co-vax-frames-claims-topics/annotations/frames.json"
 
 pred:
   # will automatically prefix with test topic / train topic / model

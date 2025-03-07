@@ -22,6 +22,7 @@ data:
   test_topic: Immigration
   # test_path: /content/drive/MyDrive/Data/Immigration/tweets_immigration_Nrs.xlsx
   test_path: "C:/Users/maxwe/My Drive/Data/Immigration/tweets_immigration_Nrs.xlsx"
+  test_frames: "C:/Users/maxwe/My Drive/Data/Immigration/frames.json"
 
 pred:
   # will automatically prefix with test topic / train topic / model

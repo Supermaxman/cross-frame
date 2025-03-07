@@ -21,6 +21,7 @@ class DataConfig:
     train_frames: str
     test_topic: str
     test_path: str
+    test_frames: Optional[str] = None
 
 
 @dataclasses.dataclass
