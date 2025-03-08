@@ -51,6 +51,9 @@ def create_eval(config: ExperimentConfig):
         #     "response_schema": response_schema,
         #     "id_lookup": id_lookup,
         # }
+        eval_path = os.path.join(output_model_folder, f"eval-{sample}.xlsx")
+        if os.path.exists(eval_path):
+            continue
         predictions = load_predictions(output_path)
         known_frames = None
         sim_model = None
@@ -100,7 +103,7 @@ def create_eval(config: ExperimentConfig):
             columns.extend(["sim_f_id", "sim_f_frame", "sim_f_problems"])
         create_excel(
             data=rows,
-            output_path=os.path.join(output_model_folder, f"eval-{sample}.xlsx"),
+            output_path=eval_path,
             columns=columns,
             labels=labels,
         )

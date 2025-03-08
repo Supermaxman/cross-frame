@@ -1,0 +1,7 @@
+model,train_topic,test_topic,Z,A,R,Rk,F1,Pa,total,sound,clear,known,reference
+gemini-2.0-flash,Immigration,COVID-19 Vaccines,70.15,64.18,30.28,12.39,42.3,54.72,67,47,43,14,113
+o1-2024-12-17,Immigration,COVID-19 Vaccines,84.29,82.86,38.67,18.58,53.01,75.51,70,59,58,21,113
+gemini-1.5-pro-latest,Immigration,COVID-19 Vaccines,94.12,92.65,41.18,20.35,57.29,88.89,68,64,63,23,113
+gpt-4o-2024-08-06,Immigration,COVID-19 Vaccines,72.65,65.81,51.33,35.4,60.16,48.05,117,85,77,40,113
+gemini-2.0-pro-exp-02-05,Immigration,COVID-19 Vaccines,88.61,91.14,46.15,25.66,60.69,86.0,79,70,72,29,113
+o3-mini-2025-01-31,Immigration,COVID-19 Vaccines,98.8,98.8,46.86,17.7,63.57,98.41,83,82,82,20,113
