@@ -1,0 +1,7 @@
+model,train_topic,test_topic,Z,A,total,sound,clear
+gemini-2.0-flash,COVID-19 Vaccines,Abortion,12.29,9.5,179,22,17
+gpt-4o-2024-08-06,COVID-19 Vaccines,Abortion,70.75,72.64,106,75,77
+gemini-1.5-pro-latest,COVID-19 Vaccines,Abortion,79.07,74.42,43,34,32
+gemini-2.0-pro-exp-02-05,COVID-19 Vaccines,Abortion,85.06,80.46,87,74,70
+o1-2024-12-17,COVID-19 Vaccines,Abortion,86.67,85.56,90,78,77
+o3-mini-2025-01-31,COVID-19 Vaccines,Abortion,92.59,92.31,351,325,324

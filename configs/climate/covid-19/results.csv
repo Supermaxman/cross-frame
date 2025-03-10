@@ -1,0 +1,7 @@
+model,train_topic,test_topic,Z,A,total,sound,clear
+gemini-2.0-flash,COVID-19 Vaccines,Climate Change,9.0,8.0,100,9,8
+gemini-2.0-pro-exp-02-05,COVID-19 Vaccines,Climate Change,23.68,23.68,76,18,18
+gemini-1.5-pro-latest,COVID-19 Vaccines,Climate Change,37.5,41.67,24,9,10
+gpt-4o-2024-08-06,COVID-19 Vaccines,Climate Change,75.68,62.16,37,28,23
+o1-2024-12-17,COVID-19 Vaccines,Climate Change,68.75,70.83,48,33,34
+o3-mini-2025-01-31,COVID-19 Vaccines,Climate Change,88.0,84.0,50,44,42

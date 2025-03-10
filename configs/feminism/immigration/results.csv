@@ -1,0 +1,7 @@
+model,train_topic,test_topic,Z,A,total,sound,clear
+gemini-2.0-flash,Immigration,Feminism,9.47,8.42,95,9,8
+gemini-2.0-pro-exp-02-05,Immigration,Feminism,11.63,10.47,86,10,9
+gemini-1.5-pro-latest,Immigration,Feminism,63.64,57.58,33,21,19
+gpt-4o-2024-08-06,Immigration,Feminism,78.43,74.51,51,40,38
+o3-mini-2025-01-31,Immigration,Feminism,87.67,86.3,73,64,63
+o1-2024-12-17,Immigration,Feminism,97.5,98.75,80,78,79

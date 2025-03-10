@@ -1,0 +1,7 @@
+model,train_topic,test_topic,Z,A,total,sound,clear
+gemini-2.0-flash,Immigration,Abortion,32.79,22.95,122,40,28
+gpt-4o-2024-08-06,Immigration,Abortion,75.0,42.31,52,39,22
+gemini-2.0-pro-exp-02-05,Immigration,Abortion,73.91,69.57,46,34,32
+o1-2024-12-17,Immigration,Abortion,74.36,80.34,117,87,94
+gemini-1.5-pro-latest,Immigration,Abortion,89.19,91.89,37,33,34
+o3-mini-2025-01-31,Immigration,Abortion,96.0,94.67,75,72,71

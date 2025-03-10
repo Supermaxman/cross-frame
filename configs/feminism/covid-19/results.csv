@@ -1,0 +1,7 @@
+model,train_topic,test_topic,Z,A,total,sound,clear
+gemini-2.0-flash,COVID-19 Vaccines,Feminism,11.25,7.5,80,9,6
+gemini-2.0-pro-exp-02-05,COVID-19 Vaccines,Feminism,35.53,36.84,76,27,28
+gemini-1.5-pro-latest,COVID-19 Vaccines,Feminism,44.44,42.22,45,20,19
+gpt-4o-2024-08-06,COVID-19 Vaccines,Feminism,65.49,64.6,113,74,73
+o1-2024-12-17,COVID-19 Vaccines,Feminism,88.89,87.92,207,184,182
+o3-mini-2025-01-31,COVID-19 Vaccines,Feminism,92.13,93.26,89,82,83

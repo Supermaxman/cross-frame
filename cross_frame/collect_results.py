@@ -28,6 +28,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     sample = 0
     results = []
+    if not os.path.exists(args.config_folder):
+        raise FileNotFoundError(f"Folder {args.config_folder} does not exist")
     for config_path in glob.glob(os.path.join(args.config_folder, "*.yaml")):
         with open(config_path, "r") as f:
             config = yaml.safe_load(f)
@@ -61,7 +63,11 @@ if __name__ == "__main__":
     results_df = results_df[
         ["model", "train_topic", "test_topic", *results_df.columns[:-3]]
     ]
-    # sort by F1 score
-    results_df = results_df.sort_values(by="F1", ascending=True)
+    if "F1" in results_df.columns:
+        # sort by F1 score
+        results_df = results_df.sort_values(by="F1", ascending=True)
+    else:
+        # Sort by A
+        results_df = results_df.sort_values(by="A", ascending=True)
     print(results_df)
     results_df.to_csv(os.path.join(args.config_folder, "results.csv"), index=False)
